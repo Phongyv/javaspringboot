@@ -21,4 +21,23 @@ public class HomeServiceIml implements HomeService {
         return users;
     }
 
+    @Override
+    public Users getUsersById(String name){
+        for (Users user : users) {
+            if (user.getName().equals(name)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public Users searchUsers(String keyword){
+        for (Users user : users) {
+            if(user.getName().contains(keyword)) {
+                return user;
+            }
+        }
+        return null;
+    }
 }

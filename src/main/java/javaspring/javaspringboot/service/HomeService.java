@@ -9,5 +9,9 @@ import javaspring.javaspringboot.entity.Users;
 @Service
 public interface  HomeService {
     public List<Users> getListUsers();
+
+    public Users getUsersById(String name);
+
+    public Users searchUsers(String keyword);
 }
 
